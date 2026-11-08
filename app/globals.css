@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Dubai';
+  src: url('/fonts/dubai/dubai-regular.woff2') format('woff2'),
+       url('/fonts/dubai/dubai-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dubai';
+  src: url('/fonts/dubai/dubai-medium.woff2') format('woff2'),
+       url('/fonts/dubai/dubai-medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dubai';
+  src: url('/fonts/dubai/dubai-bold.woff2') format('woff2'),
+       url('/fonts/dubai/dubai-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-dubai: 'Dubai', 'Segoe UI', Tahoma, Arial, sans-serif;
+  --font-cairo: 'Cairo', 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FAF7F2;
+  color: #1A1A1A;
+  font-family: var(--font-dubai);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+[dir='rtl'] body,
+[dir='rtl'] {
+  font-family: var(--font-cairo);
+}
+
+/* Smooth direction transitions */
+[dir] * {
+  transition: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F0EBE0;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A880;
+  border-radius: 3px;
+}
+
+/* Utility classes */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-forest text-ivory font-semibold rounded-lg hover:bg-forest-light transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-gold text-gold font-semibold rounded-lg hover:bg-gold hover:text-forest transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2;
+  }
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section-title {
+    @apply text-3xl sm:text-4xl font-bold text-forest;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-ivory-dark hover:shadow-md transition-shadow duration-200;
+  }
+}

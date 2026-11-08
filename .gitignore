@@ -1,0 +1,26 @@
+# Dependency directories
+node_modules/
+.next/
+out/
+
+# Environment files
+.env
+.env.local
+.env*.local
+
+# Build artifacts
+*.tsbuildinfo
+next-env.d.ts
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
