@@ -55,7 +55,7 @@ export default function HomePage() {
   return (
     <div dir={dir}>
       {/* ── HERO ─────────────────────────────────── */}
-      <section className="relative w-full min-h-[90vh] flex items-center overflow-hidden pt-12 pb-16">
+      <section className="relative z-0 w-full min-h-[90vh] flex items-center overflow-hidden pt-12 pb-16">
         <div className="absolute inset-0 z-0" aria-hidden="true">
           <img
             src="/images/landscape-bg.jpg"
@@ -66,31 +66,85 @@ export default function HomePage() {
         </div>
 
         <div
-          className={`absolute inset-0 z-10 ${
+          className={`absolute inset-0 z-0 ${
             isRTL ? 'bg-gradient-to-l from-[#0B3B2C]/90 via-[#0B3B2C]/80 to-transparent' : 'bg-gradient-to-r from-[#0B3B2C]/90 via-[#0B3B2C]/70 to-transparent'
           }`}
           aria-hidden="true"
         />
 
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 flex items-center justify-center" aria-hidden="true">
+          <div className="absolute -left-20 -top-24 hidden h-[28rem] w-[28rem] rounded-full bg-emerald-600/20 blur-3xl animate-glow will-change-transform sm:block" />
+          <div className="absolute -bottom-32 left-1/3 hidden h-[24rem] w-[24rem] rounded-full bg-amber-500/15 blur-3xl animate-glow will-change-transform sm:block" />
+          <div className="absolute -right-16 top-8 hidden h-80 w-80 rounded-full bg-emerald-400/10 blur-3xl animate-glow will-change-transform sm:block" />
+
+          <svg
+            className="absolute inset-0 h-full w-full opacity-40 sm:opacity-60"
+            viewBox="0 0 1000 500"
+            preserveAspectRatio="none"
+            fill="none"
+          >
+            <g stroke="#34D399" strokeOpacity="0.2" strokeWidth="1.5" strokeDasharray="5 8" fill="none">
+              <path id="export-arc-europe" d="M790 260 C700 155 535 115 345 135" />
+              <path id="export-arc-east-asia" d="M790 260 C875 145 930 100 1020 72" />
+              <path id="export-arc-americas" d="M790 260 C620 365 390 410 -20 390" />
+            </g>
+
+            <g>
+              <circle
+                cx="790"
+                cy="260"
+                r="15"
+                fill="#34D399"
+                fillOpacity="0.7"
+                className="animate-ping motion-reduce:animate-none"
+                style={{
+                  animationDuration: '3.5s',
+                  transformBox: 'fill-box',
+                  transformOrigin: 'center',
+                }}
+              />
+              <circle cx="790" cy="260" r="8" fill="#10B981" fillOpacity="0.35" />
+              <circle cx="790" cy="260" r="4" fill="#6EE7B7" />
+            </g>
+
+            <g>
+              <circle r="4" fill="#FBBF24">
+                <animateMotion dur="15s" repeatCount="indefinite" path="M790 260 C700 155 535 115 345 135" />
+              </circle>
+              <circle r="3.5" fill="#6EE7B7">
+                <animateMotion dur="20s" begin="-8s" repeatCount="indefinite" path="M790 260 C875 145 930 100 1020 72" />
+              </circle>
+              <circle r="4" fill="#FBBF24">
+                <animateMotion dur="18s" begin="-5s" repeatCount="indefinite" path="M790 260 C620 365 390 410 -20 390" />
+              </circle>
+            </g>
+          </svg>
+        </div>
+
         <div
-          className={`absolute bottom-0 z-20 flex h-[82%] w-[78%] items-center justify-center max-w-3xl ${
+          className={`absolute bottom-0 z-[5] flex h-[82%] w-[78%] items-center justify-center max-w-3xl ${
             isRTL ? 'left-[-4%] lg:left-[-2%] right-auto' : 'right-[-4%] lg:right-[-2%] left-auto'
           }`}
         >
-          <img
-            src="/images/hero-elements.png"
-            alt=""
-            className="h-full w-full object-contain"
-            style={{
-              maskImage: 'radial-gradient(circle at center, black 60%, transparent 100%)',
-              WebkitMaskImage: 'radial-gradient(circle at center, black 60%, transparent 100%)',
-              maskRepeat: 'no-repeat',
-              WebkitMaskRepeat: 'no-repeat',
-            }}
-          />
+          <div
+            className="h-full w-full animate-fade-up-blur"
+            style={{ animationDelay: '1000ms', willChange: 'transform, opacity' }}
+          >
+            <img
+              src="/images/hero-elements.png"
+              alt=""
+              className="h-full w-full object-contain"
+              style={{
+                maskImage: 'radial-gradient(circle at center, black 60%, transparent 100%)',
+                WebkitMaskImage: 'radial-gradient(circle at center, black 60%, transparent 100%)',
+                maskRepeat: 'no-repeat',
+                WebkitMaskRepeat: 'no-repeat',
+              }}
+            />
+          </div>
         </div>
 
-        <div className="relative z-30 w-full max-w-7xl mx-auto px-6">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
           <div
             className={`max-w-3xl ${
               isRTL ? 'mr-auto text-right lg:ml-auto lg:mr-0' : 'ml-0 text-left lg:mr-auto'
@@ -99,21 +153,31 @@ export default function HomePage() {
             <div
               className={`inline-flex items-center gap-2 bg-gold/20 border border-gold/30 rounded-full px-4 py-1.5 mb-6 ${
                 isRTL ? 'flex-row-reverse' : ''
-              }`}
+              } animate-fade-up-blur`}
+              style={{ animationDelay: '0ms', willChange: 'transform, opacity, filter' }}
             >
               <span className="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
               <span className="text-gold text-sm font-medium">Sultanate of Oman · Salalah Free Zone</span>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-ivory leading-tight mb-6 animate-slide-up">
+            <h1
+              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-ivory leading-tight mb-6 animate-fade-up-blur"
+              style={{ animationDelay: '250ms', willChange: 'transform, opacity, filter' }}
+            >
               {t('hero.tagline')}
             </h1>
 
-            <p className="text-lg sm:text-xl text-ivory/75 leading-relaxed mb-10 max-w-2xl animate-fade-in">
+            <p
+              className="text-lg sm:text-xl text-ivory/75 leading-relaxed mb-10 max-w-2xl animate-fade-up-blur"
+              style={{ animationDelay: '500ms', willChange: 'transform, opacity, filter' }}
+            >
               {t('hero.subtitle')}
             </p>
 
-            <div className={`flex flex-wrap gap-4 ${isRTL ? 'justify-end' : ''}`}>
+            <div
+              className={`flex flex-wrap gap-4 ${isRTL ? 'justify-end' : ''} animate-fade-up-blur`}
+              style={{ animationDelay: '750ms', willChange: 'transform, opacity, filter' }}
+            >
               <Link href="/products" className="btn-primary text-base px-8 py-3.5">
                 {t('hero.cta.products')}
               </Link>
@@ -125,7 +189,8 @@ export default function HomePage() {
             <div
               className={`mt-16 grid grid-cols-3 gap-6 max-w-lg bg-[#0B3B2C]/10 backdrop-blur-[1px] rounded-2xl p-4 border border-gold/20 ${
                 isRTL ? 'text-right' : 'text-left'
-              }`}
+              } animate-fade-up-blur`}
+              style={{ animationDelay: '750ms', willChange: 'transform, opacity, filter' }}
             >
               {[
                 { label: isRTL ? 'الإطلاق التجاري' : 'Commercial Launch', value: '2027' },
@@ -142,7 +207,7 @@ export default function HomePage() {
         </div>
 
         {/* Bottom wave */}
-        <div className="absolute bottom-0 left-0 right-0 z-40">
+        <div className="absolute bottom-0 left-0 right-0 z-20">
           <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
             <path d="M0 80L1440 80L1440 20C1200 70 960 10 720 40C480 70 240 10 0 40L0 80Z" fill="#FAF7F2" />
           </svg>
