@@ -4,6 +4,7 @@ import { useLanguage } from '@/lib/i18n';
 
 export default function AboutPage() {
   const { t, dir } = useLanguage();
+  const isRTL = dir === 'rtl';
 
   return (
     <div dir={dir}>
@@ -15,7 +16,9 @@ export default function AboutPage() {
         />
         <div className="section-container relative z-10 text-center">
           <div className="inline-flex items-center gap-2 bg-gold/20 border border-gold/30 rounded-full px-4 py-1.5 mb-6">
-            <span className="text-gold text-sm font-medium">United Arab Gum LLC · ذ.م.م</span>
+            <span className="text-gold text-sm font-medium">
+              {isRTL ? 'الصمغ العربي المتحدة' : 'United Arab Gum LLC'}
+            </span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold text-ivory mb-4">{t('about.hero.title')}</h1>
           <p className="text-xl text-ivory/70">{t('about.hero.subtitle')}</p>

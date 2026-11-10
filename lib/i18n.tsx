@@ -48,6 +48,7 @@ const en: Record<string, string> = {
   // Nav
   'nav.home': 'Home',
   'nav.about': 'About Us',
+  'nav.factory': 'Our Factory',
   'nav.products': 'Products',
   'nav.contact': 'Contact',
   'nav.lang': 'العربية',
@@ -113,6 +114,14 @@ const en: Record<string, string> = {
     'Quality is embedded in every stage of our operations — from raw material sourcing to finished product delivery. Our manufacturing processes are designed to meet internationally recognized standards including ISO, GMP, and Food Safety certifications.',
   'about.quality.p2':
     'Sustainability is equally central to our identity. We are committed to responsible sourcing practices, minimizing our environmental footprint, and contributing positively to the communities along our supply chain.',
+
+  // Factory page
+  'factory.eyebrow': 'Our Factory',
+  'factory.title': 'State-of-the-Art Production & Exclusive Global Distribution',
+  'factory.body':
+    'Al Shafaq for Arabic Gum SPC (Salalah Free Zone) operates our advanced manufacturing and processing facility, specializing entirely in the collection, cleaning, grading, processing, and bulk packaging of premium Gum Arabic. All international commercial transactions, sales orders, and global client relations are exclusively managed and serviced worldwide through United Arab Gum, our designated global commercial partner. This streamlined partnership ensures that every international client receives world-class product standards, rigorous quality control, and seamless end-to-end export service directly from our production plant in the Salalah Free Zone.',
+  'factory.image1.alt': 'Inside the Gum Arabic manufacturing facility',
+  'factory.image2.alt': 'Gum Arabic production and processing equipment',
 
   // Products page
   'products.hero.title': 'Our Products & Applications',
@@ -200,6 +209,7 @@ const ar: Record<string, string> = {
   // Nav
   'nav.home': 'الرئيسية',
   'nav.about': 'من نحن',
+  'nav.factory': 'مصنعنا',
   'nav.products': 'المنتجات',
   'nav.contact': 'تواصل معنا',
   'nav.lang': 'English',
@@ -240,11 +250,11 @@ const ar: Record<string, string> = {
   'sectors.ind.desc': 'لاصق ورابط وعامل تغليف لأحبار الطباعة والتطبيقات التقنية.',
 
   // About page
-  'about.hero.title': 'عن يونايتد عرب غم ذ.م.م',
+  'about.hero.title': 'عن الصمغ العربي المتحدة',
   'about.hero.subtitle': 'جذورنا في عُمان. طموحنا للعالم.',
   'about.identity.title': 'الهوية المؤسسية والرؤية',
   'about.identity.p1':
-    'يونايتد عرب غم ذ.م.م شركة عُمانية ذات مسؤولية محدودة، مملوكة بالكامل لمواطنين عُمانيين، تأسست لتصبح معالجاً رائداً ومورداً عالمياً لمنتجات الصمغ العربي الممتازة. رؤيتنا هي وضع عُمان في طليعة صناعة الصمغ الطبيعي من خلال الجمع بين تكنولوجيا المعالجة المتقدمة والالتزام الراسخ بالجودة والاستدامة.',
+    'الصمغ العربي المتحدة شركة عُمانية ذات مسؤولية محدودة، مملوكة بالكامل لمواطنين عُمانيين، تأسست لتصبح معالجاً رائداً ومورداً عالمياً لمنتجات الصمغ العربي الممتازة. رؤيتنا هي وضع عُمان في طليعة صناعة الصمغ الطبيعي من خلال الجمع بين تكنولوجيا المعالجة المتقدمة والالتزام الراسخ بالجودة والاستدامة.',
   'about.identity.p2':
     'نحصل على أجود الصمغ العربي الخام من مناطق الإنتاج ونحوله إلى درجات عالية النقاء وموحدة المواصفات تلبي المتطلبات الدقيقة لعملاء الغذاء والأدوية والمكملات الغذائية ومستحضرات التجميل والصناعة في جميع أنحاء العالم.',
   'about.mission.title': 'مهمتنا',
@@ -256,15 +266,23 @@ const ar: Record<string, string> = {
   'about.locations.plant.title': 'منشأة التصنيع — صلالة',
   'about.locations.plant.desc': 'المنطقة الحرة بصلالة، محافظة ظفار، سلطنة عُمان',
   'about.leadership.title': 'القيادة',
-  'about.leadership.name': 'السيد سعيد سالم سعيد البريكي',
+  'about.leadership.name': 'الفاضل سعيد سالم سعيد البريكي',
   'about.leadership.role': 'رئيس مجلس الإدارة',
   'about.leadership.bio':
-    'يتولى السيد سعيد سالم سعيد البريكي رئاسة مجلس إدارة يونايتد عرب غم ذ.م.م، حاملاً معه خبرة واسعة في تطوير الأعمال والتجارة العُمانية. تحت قيادته، تلتزم الشركة ببناء مؤسسة صمغ عربي عالمية المستوى تدفع بعجلة القيمة الاقتصادية لعُمان وتلبي المعايير العالمية للجودة.',
+    'يتولى الفاضل سعيد سالم سعيد البريكي رئاسة مجلس إدارة الصمغ العربي المتحدة، حاملاً معه خبرة واسعة في تطوير الأعمال والتجارة العُمانية. تحت قيادته، تلتزم الشركة ببناء مؤسسة صمغ عربي عالمية المستوى تدفع بعجلة القيمة الاقتصادية لعُمان وتلبي المعايير العالمية للجودة.',
   'about.quality.title': 'الجودة والاستدامة',
   'about.quality.p1':
     'الجودة متجذرة في كل مرحلة من مراحل عملياتنا — من تحديد مصادر المواد الخام إلى تسليم المنتج النهائي. تم تصميم عمليات التصنيع لدينا لتلبية المعايير الدولية المعترف بها، بما في ذلك شهادات ISO وGMP وسلامة الغذاء.',
   'about.quality.p2':
     'الاستدامة بالقدر ذاته محورية في هويتنا. نلتزم بممارسات المصادر المسؤولة، وتقليل أثرنا البيئي، والمساهمة الإيجابية في المجتمعات على طول سلسلة التوريد.',
+
+  // Factory page
+  'factory.eyebrow': 'مصنعنا',
+  'factory.title': 'إنتاج متطور وتوزيع عالمي حصري',
+  'factory.body':
+    'تشغل شركة الشفق للصُمغ العربي (المنطقة الحرة بصلالة) منشأة التصنيع والمعالجة المتقدمة التابعة لنا، والتي تتخصص بالكامل في جمع، وتنظيف، وتصنيف، ومعالجة، وتعبئة الصُمغ العربي الفاخر بكميات كبيرة. يتم إدارة وخدمة جميع المعاملات التجارية الدولية، وطلبات المبيعات، وعلاقات العملاء العالمية حصرياً في جميع أنحاء العالم من خلال الصمغ العربي المتحدة (United Arab Gum)، بصفتها الشريك التجاري العالمي المعتمد لدينا. يضمن هذا التعاون الانسيابي حصول كل عميل دولي على معايير منتجات عالمية المستوى، ورقابة صارمة على الجودة، وخدمة تصدير سلسة ومتكاملة مباشرة من مصنعنا في المنطقة الحرة بصلالة.',
+  'factory.image1.alt': 'منشأة تصنيع الصمغ العربي من الداخل',
+  'factory.image2.alt': 'معدات إنتاج ومعالجة الصمغ العربي',
 
   // Products page
   'products.hero.title': 'منتجاتنا وتطبيقاتها',
@@ -341,6 +359,6 @@ const ar: Record<string, string> = {
   'footer.desc': 'الشركة الرائدة في معالجة وتصنيع الصمغ العربي في عُمان، تخدم أسواق الغذاء والأدوية ومستحضرات التجميل والصناعة عالمياً.',
   'footer.links': 'روابط سريعة',
   'footer.contact': 'تواصل',
-  'footer.copyright': '© 2026 يونايتد عرب غم ذ.م.م. جميع الحقوق محفوظة.',
+  'footer.copyright': '© 2026 الصمغ العربي المتحدة. جميع الحقوق محفوظة.',
   'footer.location': 'سلطنة عُمان',
 };

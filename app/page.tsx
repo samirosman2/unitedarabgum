@@ -73,7 +73,7 @@ export default function HomePage() {
         />
 
         <div
-          className={`absolute top-1/2 -translate-y-1/2 z-20 flex items-center justify-center h-[82%] w-[78%] max-w-3xl ${
+          className={`absolute bottom-0 z-20 flex h-[82%] w-[78%] items-center justify-center max-w-3xl ${
             isRTL ? 'left-[-4%] lg:left-[-2%] right-auto' : 'right-[-4%] lg:right-[-2%] left-auto'
           }`}
         >

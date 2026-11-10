@@ -256,7 +256,11 @@ export default function ContactPage() {
                       <div>
                         <p className="text-xs font-semibold text-gold uppercase tracking-wider mb-0.5">{item.label}</p>
                         {item.href ? (
-                          <a href={item.href} className="text-sm text-charcoal hover:text-forest transition-colors font-medium">
+                          <a
+                            href={item.href}
+                            dir={item.href.startsWith('tel:') ? 'ltr' : undefined}
+                            className="text-sm text-charcoal hover:text-forest transition-colors font-medium"
+                          >
                             {item.value}
                           </a>
                         ) : (

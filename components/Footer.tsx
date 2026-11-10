@@ -9,12 +9,13 @@ export default function Footer() {
   const navLinks = [
     { href: '/', label: t('nav.home') },
     { href: '/about', label: t('nav.about') },
+    { href: '/factory', label: t('nav.factory') },
     { href: '/products', label: t('nav.products') },
     { href: '/contact', label: t('nav.contact') },
   ];
 
   const footerCopyright =
-    dir === 'rtl' ? '© 2026 الصمغ العربي المتحدة ذ.م.م. جميع الحقوق محفوظة.' : t('footer.copyright');
+    dir === 'rtl' ? '© 2026 الصمغ العربي المتحدة. جميع الحقوق محفوظة.' : t('footer.copyright');
 
   return (
     <footer className="bg-forest text-ivory/90" dir={dir}>
@@ -23,10 +24,19 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img
-                src="/logo.png"
-                alt="United Arab Gum LLC logo"
-                className="brightness-0 invert h-[35%] w-auto max-w-[180px] min-w-[120px] object-contain"
+              <div
+                role="img"
+                aria-label="United Arab Gum LLC logo"
+                className="h-[144px] w-[180px] max-w-[180px] min-w-[120px]"
+                style={{
+                  backgroundColor: 'rgb(197 168 128 / var(--tw-text-opacity, 1))',
+                  maskImage: "url('/logo.png')",
+                  WebkitMaskImage: "url('/logo.png')",
+                  maskSize: 'contain',
+                  WebkitMaskSize: 'contain',
+                  maskRepeat: 'no-repeat',
+                  WebkitMaskRepeat: 'no-repeat',
+                }}
               />
             </div>
             <p className="text-ivory/70 text-sm leading-relaxed max-w-xs">{t('footer.desc')}</p>
