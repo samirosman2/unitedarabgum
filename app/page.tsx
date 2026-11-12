@@ -266,6 +266,49 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── FACTORY ──────────────────────────────── */}
+      <section className="bg-ivory py-16 sm:py-20">
+        <div className="section-container">
+          <div
+            className={`overflow-hidden rounded-3xl border border-forest/10 bg-gradient-to-br from-white via-white to-emerald-50 shadow-lg shadow-forest/5 ${
+              isRTL ? 'lg:flex-row-reverse' : ''
+            } flex flex-col lg:flex-row`}
+          >
+            <div className="group relative min-h-[280px] overflow-hidden sm:min-h-[380px] lg:min-h-[480px] lg:w-1/2">
+              <img
+                src="/gallery/factory1.jpg"
+                alt={isRTL ? 'الواجهة الخارجية لمصنع المعالجة الرئيسي' : 'Main processing plant exterior'}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-forest/35 via-transparent to-transparent" />
+              <div className="absolute bottom-5 left-5 h-16 w-16 rounded-bl-2xl border-b-2 border-l-2 border-gold/80 sm:bottom-7 sm:left-7" />
+            </div>
+
+            <div className={`flex flex-col justify-center p-7 sm:p-10 lg:w-1/2 lg:p-14 ${isRTL ? 'text-right' : 'text-left'}`}>
+              <span className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-emerald-800/15 bg-emerald-800/5 px-4 py-1.5 text-sm font-semibold text-emerald-800">
+                <span className="h-2 w-2 rounded-full bg-gold" />
+                {t('home.factory.eyebrow')}
+              </span>
+              <h2 className="text-3xl font-bold leading-tight text-forest sm:text-4xl">
+                {t('home.factory.title')}
+              </h2>
+              <div className={`my-6 h-1 w-16 rounded-full bg-gold ${isRTL ? 'mr-0' : 'ml-0'}`} />
+              <p className="max-w-xl text-base leading-8 text-charcoal-light sm:text-lg">
+                {t('home.factory.description')}
+              </p>
+              <Link
+                href="/factory"
+                className="btn-primary mt-8 w-fit gap-3 text-base"
+              >
+                {t('home.factory.cta')}
+                <span aria-hidden="true">{isRTL ? '←' : '→'}</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA BANNER ───────────────────────────── */}
       <section className="py-16 bg-forest relative overflow-hidden">
         <div

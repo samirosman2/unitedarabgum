@@ -49,6 +49,7 @@ const en: Record<string, string> = {
   'nav.home': 'Home',
   'nav.about': 'About Us',
   'nav.factory': 'Our Factory',
+  'nav.gallery': 'Gallery',
   'nav.products': 'Products',
   'nav.contact': 'Contact',
   'nav.lang': 'العربية',
@@ -87,6 +88,13 @@ const en: Record<string, string> = {
   'sectors.cosm.desc': 'Natural thickener and film-former for skincare formulations.',
   'sectors.ind': 'Industrial',
   'sectors.ind.desc': 'Adhesive, binder, and coating agent for printing inks and technical applications.',
+
+  // Home factory section
+  'home.factory.eyebrow': 'Our Factory',
+  'home.factory.title': 'State-of-the-Art Processing Facility',
+  'home.factory.description':
+    'Equipped with advanced automated sorting lines, stringent quality control systems, and large-scale bulk storage capabilities, our primary facility ensures premium hygiene and grading standards from raw harvest to final export.',
+  'home.factory.cta': 'Explore Factory & Infrastructure',
 
   // About page
   'about.hero.title': 'About United Arab Gum LLC',
@@ -210,6 +218,7 @@ const ar: Record<string, string> = {
   'nav.home': 'الرئيسية',
   'nav.about': 'من نحن',
   'nav.factory': 'مصنعنا',
+  'nav.gallery': 'معرض الصور',
   'nav.products': 'المنتجات',
   'nav.contact': 'تواصل معنا',
   'nav.lang': 'English',
@@ -248,6 +257,13 @@ const ar: Record<string, string> = {
   'sectors.cosm.desc': 'مُكثف طبيعي ومكوّن لطبقة رقيقة لتركيبات العناية بالبشرة.',
   'sectors.ind': 'الصناعة',
   'sectors.ind.desc': 'لاصق ورابط وعامل تغليف لأحبار الطباعة والتطبيقات التقنية.',
+
+  // Home factory section
+  'home.factory.eyebrow': 'مصنعنا',
+  'home.factory.title': 'منشأة معالجة متطورة وعالية التقنية',
+  'home.factory.description':
+    'مجهزة بخطوط فرز آلية متقدمة، وأنظمة صارمة لمراقبة الجودة، وقدرات تخزين ضخمة بالجملة، تضمن منشأتنا الرئيسية أعلى معايير النظافة والتدريس من الحصاد الخام حتى التصدير النهائي.',
+  'home.factory.cta': 'استكشف المصنع والبنية التحتية',
 
   // About page
   'about.hero.title': 'عن الصمغ العربي المتحدة',

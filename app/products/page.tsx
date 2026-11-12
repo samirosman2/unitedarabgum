@@ -1,9 +1,18 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useLanguage } from '@/lib/i18n';
 
 const products = [1, 2, 3, 4, 5, 6] as const;
+const productImages = [
+  '/products/Spray-Dried_Gum_Arabic_Powder.jpg',
+  '/products/Food-Grade_Gum_Arabic.jpg',
+  '/products/Pharmaceutical-Grade_Gum_Arabic.jpg',
+  '/products/Cosmetic-Grade_Gum_Arabic.jpg',
+  '/products/Industrial-Grade_Gum_Arabic.jpg',
+  '/products/Specialty.jpg',
+] as const;
 
 const gradeBadgeColor: Record<string, string> = {
   'Standard / Premium': 'bg-blue-50 text-blue-700 border-blue-200',
@@ -95,6 +104,15 @@ export default function ProductsPage() {
                   </span>
 
                   <h3 className="text-forest font-bold text-lg mb-3 leading-snug">{t(`product.${n}.name`)}</h3>
+                  <div className="group/image relative mb-5 aspect-[16/10] overflow-hidden rounded-xl border border-forest/10 bg-slate-100">
+                    <Image
+                      src={productImages[i]}
+                      alt={t(`product.${n}.name`)}
+                      fill
+                      sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 ease-out group-hover/image:scale-105"
+                    />
+                  </div>
                   <p className="text-charcoal-muted text-sm leading-relaxed mb-5 flex-1">{t(`product.${n}.desc`)}</p>
 
                   {/* Applications */}

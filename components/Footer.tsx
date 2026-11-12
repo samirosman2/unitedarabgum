@@ -10,6 +10,7 @@ export default function Footer() {
     { href: '/', label: t('nav.home') },
     { href: '/about', label: t('nav.about') },
     { href: '/factory', label: t('nav.factory') },
+    { href: '/gallery', label: t('nav.gallery') },
     { href: '/products', label: t('nav.products') },
     { href: '/contact', label: t('nav.contact') },
   ];
